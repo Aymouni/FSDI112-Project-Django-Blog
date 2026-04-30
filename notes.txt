@@ -1,0 +1,20 @@
+--- Create venv ---
+WIN py/python -m venv venv
+MacOS python3 -m venv venv
+
+--- Activate the venv ---
+WIN venv\Scripts\activate
+MacOS source venv/bin/activate
+
+--- Install Django ---
+pip install django
+
+--- Run App ---
+Both OS django-admin startproject NAME_OF_PROJECT
+WIN python.exe .\manage.py runserver
+
+WIN: python manage.py startapp NAME_OF_THE_APP
+Mac OS: python3 manage.py startapp NAME_OF_THE_APP
+
+Note: Replace NAME_OF_PROJECT with config or any other names
+Expected Output: two folders and a single file called **manage.py**
