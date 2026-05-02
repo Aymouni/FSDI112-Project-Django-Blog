@@ -18,3 +18,9 @@ Mac OS: python3 manage.py startapp NAME_OF_THE_APP
 
 Note: Replace NAME_OF_PROJECT with config or any other names
 Expected Output: two folders and a single file called **manage.py**
+
+--- Models in Django ---
+When we finish model structure these commands in order:
+
+    1. python manage.py makemigrations
+    2. python manage.py migrate
