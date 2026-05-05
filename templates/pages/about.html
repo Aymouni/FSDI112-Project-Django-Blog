@@ -1,20 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block css %}
-  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% block title %}
+    About Page
 {% endblock %}
 
-{% block title%} 
-  About Page
-{% endblock%} 
-
 {% block content %}
-  <h1>About Me</h1>
-  <p>I am a software developer learning Django and building cool projects.</p>
+    <div class="simple-page">
+        <h1>About Me</h1>
+        <p>Hi, I'm John Doe — a software developer with a passion for building clean, practical web applications. I started my journey in tech driven by curiosity and a love for solving problems, and I haven't looked back since.</p>
+        <p>I'm currently learning Django and sharpening my backend skills, one project at a time. When I'm not coding, you'll find me exploring new technologies, reading, or enjoying a good cup of coffee.</p>
+    </div>
 {% endblock %}
 
 {% block js %}
-  <script src="{% static 'js/about.js' %}"></script>
+    <script src="{% static 'js/about.js' %}"></script>
 {% endblock %}
-

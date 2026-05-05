@@ -7,10 +7,12 @@
 {% block content %}
     <h1>All Posts</h1>
     <div>
-        <ul>
+        <ul class="post-list">
             {% for post in posts %}
                 <li>
-                    {{post.id}} - {{post.title}}
+                    <span class="post-id">{{ post.id }}</span>
+                    <span class="post-title">{{ post.title }}</span>
+                    <a href="{% url 'post_detail' post.id %}">Continue Reading</a>
                 </li>
             {% endfor %}
         </ul>

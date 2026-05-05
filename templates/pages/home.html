@@ -1,10 +1,41 @@
 {% extends "base.html" %}
 
-{% block title%}
-    Home Page
-{% endblock%} 
+{% block title %}
+    Home
+{% endblock %}
 
 {% block content %}
-    <h1>Home</h1>
-    <p>Hello World using Jinja Tags</p>
+    <div class="hero">
+        <p class="hero-tag">Welcome to my blog</p>
+        <h1 class="hero-title">Thoughts, projects,<br>and things I'm <em>learning.</em></h1>
+        <p class="hero-sub">Hi, I'm John Doe — a software developer sharing my journey through code, Django, and everything in between. I write about what I build, what breaks, and what I figure out along the way.</p>
+        <a href="{% url 'post_list' %}" class="btn btn-success">Read the Blog</a>
+        <a href="{% url 'about' %}" class="btn btn-secondary ms-2">About Me</a>
+    </div>
+
+    <hr>
+
+    <p class="section-label">What you'll find here</p>
+    <div class="feature-cards">
+        <div class="feature-card">
+            <div class="feature-card-title">Writing</div>
+            <div class="feature-card-sub">Articles and notes on Django, Python, and web development.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-card-title">Projects</div>
+            <div class="feature-card-sub">Things I'm building — from small experiments to full apps.</div>
+        </div>
+        <div class="feature-card">
+            <div class="feature-card-title">Learning</div>
+            <div class="feature-card-sub">Honest write-ups on concepts I'm exploring as a developer.</div>
+        </div>
+    </div>
+
+    <div class="author-strip">
+        <div class="author-avatar">JD</div>
+        <div>
+            <p class="author-text"><strong>John Doe</strong> — Software developer, Django learner, and occasional writer. Based on the internet.</p>
+            <a href="{% url 'about' %}" class="author-link">Read more about me →</a>
+        </div>
+    </div>
 {% endblock %}

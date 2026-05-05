@@ -17,5 +17,5 @@ class Post(models.Model):
     def __str__(self):                                     # to string method
         return f"{self.id} - {self.title} by {self.author}"
     
-    def get_absolute_url(self):
-        return reverse("post_detail", arg=[self.id])
+    def get_absolute_url(self):                            # Redirects a user when we excute a POST request
+        return reverse("post_detail", args=[self.id])
